@@ -11,31 +11,56 @@ html{
 }
 
 /*  =============
-   Main style rules.
+   General style rules.
     =============
 */
 
 body {
-    background-color: aqua;
+    background-color: rgb(136, 136, 158);
     margin: 5px auto;
+    font-weight: 900;
+    font-size: 2em;
 }
+
 .container{
+    width: 96%;
+    margin: 4px auto;
+    /* border: 2px solid black; */
+    height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border: 3px solid red;
+    align-content: center;
+}
+input[type='text']{
+    height: 100px;
+}
+/* =============
+    Media Queries
+   =============
+*/
+
+@media screen and (min-width:650px){
+    body{
+        background-color: red;
+    }
 }
 
-.input{
-    height: 2em;
-    width: 96%;
-    margin: 0 auto;
-    background-color: white;
+div[class *="number"]{
+    display: flex;
+    margin: 15px 0px;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    flex: 2 0 0;
 }
-.input, .main{
+div[class ^= "row"]{
+    /* border: 2px solid blue; */
     flex-basis: 100%;
-    border: 2px solid green;
+    display: flex;
+    justify-content: space-around;
+    margin: 4px;
 }
-
-
-
+div[class *="row"] button{
+    flex-basis: 20%;
+    background-color: rgba(255, 255, 255, 0.815);
+    border: 2px inset rgb(0, 2, 128);
+}
